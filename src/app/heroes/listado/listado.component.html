@@ -1,0 +1,18 @@
+<p>listado</p>
+
+<button (click)="borrarBike()">Borrar Bike</button>
+<div>
+    <h3 *ngIf="borrada; else noBorrado">Bike borrada <small>{{borrada}}</small></h3>
+</div>
+
+<ng-template #noBorrado>
+    <h3>No se ha borrado nada</h3>
+</ng-template>
+
+
+
+<ul>
+    <li *ngFor="let bike of bikes; let i = index">
+        {{i + 1}} - {{bike}}
+    </li>
+</ul>
